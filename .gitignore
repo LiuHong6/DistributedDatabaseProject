@@ -17,6 +17,6 @@ buildNumber.properties
 .project
 .settings/
 
-# 旧的src和bin目录
+# Old src and bin directories
 /src/com/
 /bin/ 

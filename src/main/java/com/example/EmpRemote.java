@@ -12,4 +12,6 @@ public interface EmpRemote extends Remote {
     int deleteEmployee(String eno) throws RemoteException, SQLException;
     void clearAllEmployees() throws RemoteException, SQLException;
     List<EMP> getAllEmployees() throws RemoteException, SQLException;
+    boolean batchUpdateWithTransaction(String eno1, String ename1, String title1, 
+                                      String eno2, String ename2, String title2) throws RemoteException, SQLException;
 }

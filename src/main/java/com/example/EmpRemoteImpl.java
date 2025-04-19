@@ -43,4 +43,10 @@ public class EmpRemoteImpl extends UnicastRemoteObject implements EmpRemote {
     public List<EMP> getAllEmployees() throws RemoteException, SQLException {
         return empDAO.getAllEmployees();
     }
+    
+    @Override
+    public boolean batchUpdateWithTransaction(String eno1, String ename1, String title1, 
+                                            String eno2, String ename2, String title2) throws RemoteException, SQLException {
+        return empDAO.batchUpdateWithTransaction(eno1, ename1, title1, eno2, ename2, title2);
+    }
 }
