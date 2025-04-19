@@ -7,8 +7,8 @@ import java.sql.SQLException;
 
 public class DBConnection {
     public static Connection getConnection() throws SQLException {
-        // Use a relative path to the SQLite database file in the project root
-        String url = "jdbc:sqlite:CSCI7785_database.db";
+        // 使用类加载器获取资源目录中的数据库文件
+        String url = "jdbc:sqlite::resource:CSCI7785_database.db";
         return DriverManager.getConnection(url);
     }
 }
